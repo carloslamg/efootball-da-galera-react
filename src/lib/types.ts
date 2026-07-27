@@ -8,6 +8,7 @@ export type Player = {
   goals_for: number;
   goals_against: number;
   titles: number;
+  active: boolean;
 };
 
 export type Match = {

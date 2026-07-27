@@ -1,0 +1,87 @@
+.admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.player-management-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.player-management-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px;
+  border: 1px solid #1b3624;
+  border-radius: 12px;
+  background: #08100b;
+}
+
+.player-management-row > div:first-child {
+  display: grid;
+  gap: 3px;
+}
+
+.player-management-row span {
+  color: #8f9c94;
+  font-size: 0.82rem;
+}
+
+.player-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.small-button {
+  border: 1px solid #2b4a34;
+  background: #102117;
+  color: #d7e5db;
+  padding: 7px 10px;
+  border-radius: 8px;
+}
+
+.danger-button {
+  border-color: #713434;
+  color: #ffaaaa;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.modal-card {
+  width: min(420px, 100%);
+  display: grid;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid #1b3624;
+  border-radius: 16px;
+  background: #08100b;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 900px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .player-management-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
