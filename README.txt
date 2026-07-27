@@ -1,33 +1,20 @@
-ATUALIZAÇÃO: ADMIN NO ESTILO LOVABLE
+ATUALIZAÇÃO DA HOME NO ESTILO LOVABLE
 
-1. Execute no Supabase:
-   supabase/lovable_admin_patch.sql
+1. Substitua:
+   src/pages/HomePage.tsx
 
-2. Substitua no projeto:
-   src/lib/types.ts
-   src/lib/api.ts
-   src/pages/AdminPage.tsx
+2. Copie:
+   src/lovable-home.css
 
-3. Copie:
-   src/lovable-admin.css
-
-4. No arquivo src/main.tsx, adicione:
-   import "./lovable-admin.css";
+3. No arquivo src/main.tsx, adicione:
+   import "./lovable-home.css";
 
    logo abaixo de:
    import "./styles.css";
 
-5. Faça Commit e Push no GitHub Desktop:
-   Summary: Add Lovable style admin
+4. GitHub Desktop:
+   Summary: Add Lovable style homepage
+   Commit to main
+   Push origin
 
-6. O Vercel fará o deploy automaticamente.
-
-O novo Admin terá:
-- abas Partida, Campeonato, Jogadores e Temporadas;
-- amistoso ou campeonato;
-- temporada;
-- seleção de campeonato;
-- data da partida;
-- gestão de jogadores;
-- criação de temporadas;
-- criação e encerramento de campeonatos.
+O Vercel atualizará automaticamente.
