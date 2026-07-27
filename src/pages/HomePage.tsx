@@ -9,6 +9,7 @@ import {
 import { getChampionships, getMatches, getPlayers } from "../lib/api";
 import Loading from "../components/Loading";
 import ErrorBox from "../components/ErrorBox";
+import "../lovable-home.css";
 
 export default function HomePage() {
   const players = useQuery({
