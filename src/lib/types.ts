@@ -11,6 +11,24 @@ export type Player = {
   active: boolean;
 };
 
+export type Season = {
+  id: number;
+  name: string;
+  start_date: string;
+  end_date: string | null;
+  status: "upcoming" | "active" | "finished";
+  created_at: string;
+};
+
+export type Championship = {
+  id: number;
+  name: string;
+  season_id: number | null;
+  status: "planned" | "finished";
+  played_at: string;
+  created_at: string;
+};
+
 export type Match = {
   id: number;
   player1_id: number | null;
@@ -21,6 +39,10 @@ export type Match = {
   goals2: number | null;
   summary: string | null;
   created_at: string;
+  played_at: string;
+  match_type: "friendly" | "championship";
+  season_id: number | null;
+  championship_id: number | null;
 };
 
 export type TournamentResult = {

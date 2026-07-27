@@ -1,26 +1,33 @@
-ATUALIZAÇÃO DE GESTÃO DE JOGADORES
+ATUALIZAÇÃO: ADMIN NO ESTILO LOVABLE
 
 1. Execute no Supabase:
-   supabase/player_management_patch.sql
+   supabase/lovable_admin_patch.sql
 
-2. Copie/substitua no projeto:
+2. Substitua no projeto:
    src/lib/types.ts
    src/lib/api.ts
    src/pages/AdminPage.tsx
 
 3. Copie:
-   src/player-management.css
+   src/lovable-admin.css
 
-4. Abra src/main.tsx e adicione esta linha logo depois de:
+4. No arquivo src/main.tsx, adicione:
+   import "./lovable-admin.css";
+
+   logo abaixo de:
    import "./styles.css";
 
-   import "./player-management.css";
+5. Faça Commit e Push no GitHub Desktop:
+   Summary: Add Lovable style admin
 
-5. GitHub Desktop:
-   Summary: Add player management
-   Commit to main
-   Push origin
+6. O Vercel fará o deploy automaticamente.
 
-O botão Excluir funciona assim:
-- jogador sem histórico: exclui permanentemente;
-- jogador com partidas, pontos ou campeonatos: desativa para preservar os dados.
+O novo Admin terá:
+- abas Partida, Campeonato, Jogadores e Temporadas;
+- amistoso ou campeonato;
+- temporada;
+- seleção de campeonato;
+- data da partida;
+- gestão de jogadores;
+- criação de temporadas;
+- criação e encerramento de campeonatos.

@@ -1,5 +1,11 @@
 import { supabase } from "./supabase";
-import type { Match, Player, TournamentResult } from "./types";
+import type {
+  Championship,
+  Match,
+  Player,
+  Season,
+  TournamentResult,
+} from "./types";
 
 export async function getPlayers(): Promise<Player[]> {
   const { data, error } = await supabase
@@ -28,7 +34,27 @@ export async function getMatches(): Promise<Match[]> {
   const { data, error } = await supabase
     .from("matches")
     .select("*")
-    .order("created_at", { ascending: false });
+    .order("played_at", { ascending: false });
+
+  if (error) throw error;
+  return data ?? [];
+}
+
+export async function getSeasons(): Promise<Season[]> {
+  const { data, error } = await supabase
+    .from("seasons")
+    .select("*")
+    .order("start_date", { ascending: false });
+
+  if (error) throw error;
+  return data ?? [];
+}
+
+export async function getChampionships(): Promise<Championship[]> {
+  const { data, error } = await supabase
+    .from("championships")
+    .select("*")
+    .order("played_at", { ascending: false });
 
   if (error) throw error;
   return data ?? [];
